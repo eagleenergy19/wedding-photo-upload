@@ -1,0 +1,122 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Something for You</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f7f3ee;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #3f3a36;
+      text-align: center;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 600px;
+      padding: 50px 25px;
+      box-sizing: border-box;
+    }
+
+    .small {
+      font-size: 15px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 38px;
+      font-weight: normal;
+      margin: 0 0 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 35px;
+    }
+
+    button {
+      border: none;
+      background: #3f3a36;
+      color: white;
+      padding: 16px 30px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    #video {
+      display: none;
+      margin-top: 30px;
+    }
+
+    iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+    }
+
+    .message {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div id="intro">
+      <div class="small">A Little Something for You</div>
+
+      <h1>You Found It!</h1>
+
+      <p>
+        We have one little surprise waiting for you.
+        <br>
+        Tap below to reveal it.
+      </p>
+
+      <button onclick="reveal()">✨ REVEAL ✨</button>
+    </div>
+
+    <div id="video">
+      <iframe
+        id="rick"
+        src=""
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+
+  <script>
+    function reveal() {
+      document.getElementById("intro").style.display = "none";
+      document.getElementById("video").style.display = "block";
+
+      document.getElementById("rick").src =
+        "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0";
+    }
+  </script>
+
+</body>
+</html>
+```
